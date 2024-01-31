@@ -87,7 +87,7 @@ async def fetch_ais_density_grid(
             fetch_ais_density(session, bbox, width=n_longitudes, height=n_latitudes, i=i, j=j, time=time)
             for i, j in product(range(n_longitudes), range(n_latitudes))
         ]
-        return await tqdm.asyncio.tqdm.gather(*tasks)
+        return await tqdm.asyncio.tqdm.gather(*tasks, timeout=60 * 60)
 
 
 if __name__ == "__main__":
