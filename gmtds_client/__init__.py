@@ -2,6 +2,7 @@ import asyncio
 import logging
 import urllib.parse
 from itertools import product
+from pathlib import Path
 
 import aiohttp
 import tqdm.asyncio
@@ -110,5 +111,5 @@ if __name__ == "__main__":
     data_np = np.asarray(data).reshape(359, 180).transpose()
 
     # Dump data
-    with open("data.json", "w") as f:
+    with Path("data.json").open("w") as f:
         json.dump(data_np.tolist(), f)
