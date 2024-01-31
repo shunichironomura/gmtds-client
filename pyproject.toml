@@ -10,7 +10,7 @@ python = ">=3.11"
 requests = ">=2.31.0"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.1.14"
+ruff = "0.1.15"
 mypy = "1.8.0"
 pytest = "7.4.4"
 ipykernel = "^6.29.0"
