@@ -16,7 +16,7 @@ tqdm = ">=4.66.1"
 ruff = "0.3.4"
 mypy = "1.9.0"
 pytest = "8.1.1"
-ipykernel = "6.29.2"
+ipykernel = "6.29.4"
 matplotlib = "3.8.3"
 types-tqdm = "4.66.0.20240106"
 
