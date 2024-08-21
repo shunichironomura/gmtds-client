@@ -13,7 +13,7 @@ numpy = ">=1.26.3"
 tqdm = ">=4.66.1"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.5.7"
+ruff = "0.6.1"
 mypy = "1.11.1"
 pytest = "8.3.2"
 ipykernel = "6.29.5"
@@ -29,6 +29,7 @@ build-backend = "poetry.core.masonry.api"
 target-version = "py311"
 line-length = 120
 
+[tool.ruff.lint]
 select = ["ALL"]
 ignore = [
     "PLR2004", # magic numbers
@@ -53,8 +54,9 @@ ignore = [
     "ERA001",  # commented-out-code
     "PLR0913", # Too many arguments in function definition
 ]
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "**.ipynb" = [
-    "B018", # useless-expression
-    "T201", # print statement
+    "B018",   # useless-expression
+    "T201",   # print statement
+    "PTH123", # `open()` should be replaced by `Path.open()`
 ]
